@@ -12,6 +12,7 @@ const initialForm = {
 export default function Contact() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState({ type: '', message: '' });
+  const [submitting, setSubmitting] = useState(false);
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -25,7 +26,7 @@ export default function Contact() {
     return '';
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const error = validate();
     if (error) {
@@ -33,8 +34,30 @@ export default function Contact() {
       return;
     }
 
-    setStatus({ type: 'success', message: 'Thanks! Your request has been received. We will contact you shortly.' });
-    setForm(initialForm);
+    try {
+      setSubmitting(true);
+      setStatus({ type: '', message: '' });
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      const payload = await response.json();
+
+      if (!response.ok || !payload?.ok) {
+        setStatus({ type: 'error', message: payload?.error || 'Failed to send request. Please try again.' });
+        return;
+      }
+
+      setStatus({ type: 'success', message: payload.message || 'Thanks! Your request has been received. We will contact you shortly.' });
+      setForm(initialForm);
+    } catch {
+      setStatus({ type: 'error', message: 'Network error. Please try again shortly.' });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -81,7 +104,9 @@ export default function Contact() {
               required
             />
           </label>
-          <button type="submit" className="btn primary">Request Demo</button>
+          <button type="submit" className="btn primary" disabled={submitting}>
+            {submitting ? 'Sending...' : 'Request Demo'}
+          </button>
 
           {status.type === 'success' && <p className="form-success">{status.message}</p>}
           {status.type === 'error' && <p className="form-error">{status.message}</p>}

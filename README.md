@@ -30,6 +30,20 @@ npm run preview
 - `/about`
 - `/contact`
 
+## Mail Configuration (server-side)
+
+Contact form submits to `/api/contact` (Vercel serverless function) using SMTP.
+
+Required environment variables:
+
+- `AGENTMAIL_API_KEY`
+- `AGENTMAIL_SMTP_USER` (example: `ulyssesprime@agentmail.to`)
+- `AGENTMAIL_SMTP_HOST` (example: `smtp.agentmail.to`)
+- `AGENTMAIL_SMTP_PORT` (example: `465`)
+- Optional: `AGENTMAIL_TO` (destination inbox override)
+
+Never expose these variables in client code.
+
 ## Deploy (Vercel)
 
 ### Option A: CLI

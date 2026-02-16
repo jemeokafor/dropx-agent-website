@@ -157,6 +157,12 @@ h3 {
   transform: translateY(-1px);
 }
 
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .btn.primary {
   background: #172033;
   color: #fff;
