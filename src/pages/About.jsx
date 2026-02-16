@@ -1,6 +1,13 @@
+import PageMeta from '../components/PageMeta';
+
 export default function About() {
   return (
-    <section className="section">
+    <>
+      <PageMeta
+        title="About | DropX Agent"
+        description="DropX Agent mission, principles, and Nigeria-first logistics operations philosophy."
+      />
+      <section className="section">
       <div className="container narrow">
         <p className="eyebrow">About DropX Agent</p>
         <h1>We make logistics execution feel less chaotic and more controllable.</h1>
@@ -19,6 +26,7 @@ export default function About() {
           </ul>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

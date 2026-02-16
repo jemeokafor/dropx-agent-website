@@ -1,8 +1,16 @@
+import SafeImage from '../components/SafeImage';
+import PageMeta from '../components/PageMeta';
+
 const teamImage = '/images/solutions-team.svg';
 
 export default function Solutions() {
   return (
-    <section className="section">
+    <>
+      <PageMeta
+        title="Solutions | DropX Agent"
+        description="Logistics automation solutions for Nigerian individuals, startups, and operations teams."
+      />
+      <section className="section">
       <div className="container">
         <p className="eyebrow">Solutions</p>
         <h1>Built for individuals, startups, and growing logistics businesses.</h1>
@@ -16,7 +24,7 @@ export default function Solutions() {
             <h2>For individuals</h2>
             <ul className="clean-list">
               <li>Same-day pickup and drop coordination</li>
-              <li>Delivery status updates in plain English</li>
+              <li>Delivery status updates in plain language</li>
               <li>Simple request flow with less back-and-forth</li>
             </ul>
           </article>
@@ -30,8 +38,9 @@ export default function Solutions() {
           </article>
         </div>
 
-        <img src={teamImage} alt="Business team planning operations" className="wide-image" />
+        <SafeImage src={teamImage} alt="Business team planning logistics operations" className="wide-image" />
       </div>
-    </section>
+      </section>
+    </>
   );
 }
