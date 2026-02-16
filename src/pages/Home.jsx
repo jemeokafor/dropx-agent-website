@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 import { coreFeatures, howItWorks, pricingTeaser } from '../data/siteContent';
 
-const heroImage =
-  'https://images.unsplash.com/photo-1700177924938-c5d19f5bb3cb?auto=format&fit=crop&w=1400&q=80';
+const heroImage = '/images/hero-logistics.svg';
+
+const stepVisuals = {
+  '01': '/images/step-connect.svg',
+  '02': '/images/step-plan.svg',
+  '03': '/images/step-deliver.svg',
+};
 
 export default function Home() {
   return (
@@ -45,6 +50,7 @@ export default function Home() {
           <div className="timeline">
             {howItWorks.map((item) => (
               <article className="timeline-item" key={item.step}>
+                <img src={stepVisuals[item.step]} alt={item.title} className="step-icon" />
                 <span>{item.step}</span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>

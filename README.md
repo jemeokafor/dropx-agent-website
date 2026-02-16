@@ -55,7 +55,9 @@ vercel --prod
 
 ## Image Attribution
 
-This project uses royalty-free image links from:
+Current production uses custom local SVG illustrations in `public/images` (no external hotlinked assets).
+
+Visual reference sources used during concept stage:
 
 1. **Unsplash** — Nupo Deyon Daniel  
    https://unsplash.com/photos/a-bunch-of-cars-driving-down-a-street-next-to-tall-buildings-23q8J9zM5vA

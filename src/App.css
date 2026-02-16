@@ -154,6 +154,14 @@ h3 {
   padding: 1rem;
 }
 
+.step-icon {
+  width: 74px;
+  height: 74px;
+  margin-bottom: 0.6rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d7deeb;
+}
+
 .timeline-item span {
   display: inline-block;
   font-size: 0.8rem;

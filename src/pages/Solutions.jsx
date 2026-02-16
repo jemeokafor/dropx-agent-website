@@ -1,5 +1,4 @@
-const teamImage =
-  'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1200';
+const teamImage = '/images/solutions-team.svg';
 
 export default function Solutions() {
   return (

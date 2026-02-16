@@ -1,7 +1,6 @@
 import { products } from '../data/siteContent';
 
-const cityImage =
-  'https://images.pexels.com/photos/18020531/pexels-photo-18020531.jpeg?auto=compress&cs=tinysrgb&w=1200';
+const cityImage = '/images/products-city.svg';
 
 export default function Products() {
   return (

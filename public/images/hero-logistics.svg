@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#EAF0FB"/>
+  <rect x="80" y="140" width="1040" height="520" rx="24" fill="#FFFFFF" stroke="#D7DEEB" stroke-width="4"/>
+  <rect x="130" y="200" width="420" height="22" rx="11" fill="#2F4F8F" opacity="0.25"/>
+  <rect x="130" y="240" width="520" height="18" rx="9" fill="#2F4F8F" opacity="0.18"/>
+  <rect x="130" y="272" width="460" height="18" rx="9" fill="#2F4F8F" opacity="0.18"/>
+  <circle cx="860" cy="340" r="150" fill="#172033" opacity="0.08"/>
+  <path d="M760 470C760 426.922 794.922 392 838 392H938C981.078 392 1016 426.922 1016 470V492H760V470Z" fill="#172033"/>
+  <rect x="760" y="492" width="256" height="74" rx="12" fill="#2F4F8F"/>
+  <circle cx="810" cy="574" r="26" fill="#172033"/>
+  <circle cx="960" cy="574" r="26" fill="#172033"/>
+  <rect x="180" y="480" width="520" height="120" rx="16" fill="#F6F8FC" stroke="#D7DEEB"/>
+  <circle cx="240" cy="540" r="22" fill="#2F4F8F"/>
+  <rect x="280" y="520" width="360" height="14" rx="7" fill="#2F4F8F" opacity="0.4"/>
+  <rect x="280" y="546" width="290" height="12" rx="6" fill="#2F4F8F" opacity="0.25"/>
+  <text x="130" y="385" fill="#172033" font-size="54" font-family="Arial, sans-serif" font-weight="700">DropX Agent</text>
+</svg>
